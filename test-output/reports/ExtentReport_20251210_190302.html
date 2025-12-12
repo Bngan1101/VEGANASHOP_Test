@@ -1,0 +1,2534 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href='https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>Vegana Shop Automation Test Report</title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo black"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>Test Execution Report</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Dec 10, 2025 07:03:02 PM</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m12 l12 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Tests</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='81.579%'><span class='strong'>31</span> test(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='18.421%'>7</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>testAdminLoginSuccess</span>
+						<span class='test-time'>Dec 10, 2025 07:03:03 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:03:03 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:03:10 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 7s+712ms</span>
+</div>
+<div class='test-desc'>Running test: testAdminLoginSuccess </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:03:07 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:03:07 PM</td>
+				<td class='step-details'>
+						Bắt đầu test đăng nhập admin với username: admin
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:03:10 PM</td>
+				<td class='step-details'>
+						Đăng nhập admin thành công và đã redirect đến trang dashboard
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:03:10 PM</td>
+				<td class='step-details'>
+						PASSED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>testAdminLoginWithWrongPassword</span>
+						<span class='test-time'>Dec 10, 2025 07:03:11 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:03:11 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:03:13 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+634ms</span>
+</div>
+<div class='test-desc'>Running test: testAdminLoginWithWrongPassword </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:03:12 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:03:12 PM</td>
+				<td class='step-details'>
+						Bắt đầu test đăng nhập admin với mật khẩu sai
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:03:13 PM</td>
+				<td class='step-details'>
+						Đăng nhập với mật khẩu sai đã hiển thị thông báo lỗi đúng
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:03:13 PM</td>
+				<td class='step-details'>
+						PASSED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>testAdminDashboardElements</span>
+						<span class='test-time'>Dec 10, 2025 07:03:14 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:03:14 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:03:20 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+432ms</span>
+</div>
+<div class='test-desc'>Running test: testAdminDashboardElements </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:03:16 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:03:16 PM</td>
+				<td class='step-details'>
+						Bắt đầu test kiểm tra các thành phần trên trang admin dashboard
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:03:20 PM</td>
+				<td class='step-details'>
+						Tất cả các thành phần chính trên trang admin dashboard đều hiển thị đúng
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:03:20 PM</td>
+				<td class='step-details'>
+						PASSED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>testAdminRoleDisplay</span>
+						<span class='test-time'>Dec 10, 2025 07:03:20 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:03:20 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:03:25 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+963ms</span>
+</div>
+<div class='test-desc'>Running test: testAdminRoleDisplay </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:03:22 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:03:22 PM</td>
+				<td class='step-details'>
+						Bắt đầu test kiểm tra hiển thị role Administrator
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:03:25 PM</td>
+				<td class='step-details'>
+						Role Administrator được hiển thị đúng trên navbar
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:03:25 PM</td>
+				<td class='step-details'>
+						PASSED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>testNavigationBetweenAdminPages</span>
+						<span class='test-time'>Dec 10, 2025 07:03:25 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:03:25 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:03:31 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+949ms</span>
+</div>
+<div class='test-desc'>Running test: testNavigationBetweenAdminPages </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:03:27 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:03:27 PM</td>
+				<td class='step-details'>
+						Bắt đầu test navigation giữa các trang admin
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:03:31 PM</td>
+				<td class='step-details'>
+						Navigation giữa các trang admin thành công
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:03:31 PM</td>
+				<td class='step-details'>
+						PASSED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>testNavigateToProductsPage</span>
+						<span class='test-time'>Dec 10, 2025 07:03:32 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:03:32 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:03:37 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+489ms</span>
+</div>
+<div class='test-desc'>Running test: testNavigateToProductsPage </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:03:33 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:03:33 PM</td>
+				<td class='step-details'>
+						Bắt đầu test navigation đến trang Products Management
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:03:37 PM</td>
+				<td class='step-details'>
+						Navigation đến trang Products Management thành công
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:03:37 PM</td>
+				<td class='step-details'>
+						PASSED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>testViewProductsList</span>
+						<span class='test-time'>Dec 10, 2025 07:03:37 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:03:37 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:03:43 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+462ms</span>
+</div>
+<div class='test-desc'>Running test: testViewProductsList </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:03:39 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:03:39 PM</td>
+				<td class='step-details'>
+						Bắt đầu test xem danh sách sản phẩm admin
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:03:43 PM</td>
+				<td class='step-details'>
+						Số lượng sản phẩm: 5
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:03:43 PM</td>
+				<td class='step-details'>
+						Xem danh sách sản phẩm thành công
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:03:43 PM</td>
+				<td class='step-details'>
+						PASSED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>testAddProductButtonDisplayed</span>
+						<span class='test-time'>Dec 10, 2025 07:03:43 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:03:43 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:03:48 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+316ms</span>
+</div>
+<div class='test-desc'>Running test: testAddProductButtonDisplayed </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:03:45 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:03:45 PM</td>
+				<td class='step-details'>
+						Bắt đầu test kiểm tra nút Add Product
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:03:48 PM</td>
+				<td class='step-details'>
+						Nút Add Product hiển thị đúng
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:03:48 PM</td>
+				<td class='step-details'>
+						PASSED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>testAddProductFormDisplayed</span>
+						<span class='test-time'>Dec 10, 2025 07:03:48 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:03:48 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:03:54 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+871ms</span>
+</div>
+<div class='test-desc'>Running test: testAddProductFormDisplayed </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:03:50 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:03:50 PM</td>
+				<td class='step-details'>
+						Bắt đầu test form thêm sản phẩm
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:03:54 PM</td>
+				<td class='step-details'>
+						Form thêm sản phẩm hiển thị đúng
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:03:54 PM</td>
+				<td class='step-details'>
+						PASSED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>testNavigateToEditProduct</span>
+						<span class='test-time'>Dec 10, 2025 07:03:54 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:03:54 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:04:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+227ms</span>
+</div>
+<div class='test-desc'>Running test: testNavigateToEditProduct </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:03:56 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:03:56 PM</td>
+				<td class='step-details'>
+						Bắt đầu test navigate đến trang edit sản phẩm
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:04:00 PM</td>
+				<td class='step-details'>
+						Navigate đến trang edit sản phẩm thành công
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:04:00 PM</td>
+				<td class='step-details'>
+						PASSED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>testDeleteProduct</span>
+						<span class='test-time'>Dec 10, 2025 07:04:00 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:04:00 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:04:05 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+221ms</span>
+</div>
+<div class='test-desc'>Running test: testDeleteProduct </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:04:02 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:04:02 PM</td>
+				<td class='step-details'>
+						Bắt đầu test delete sản phẩm
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:04:05 PM</td>
+				<td class='step-details'>
+						Delete sản phẩm redirect đúng
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:04:05 PM</td>
+				<td class='step-details'>
+						PASSED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>testNavigateToOrdersPage</span>
+						<span class='test-time'>Dec 10, 2025 07:04:05 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:04:05 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:04:10 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+624ms</span>
+</div>
+<div class='test-desc'>Running test: testNavigateToOrdersPage </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:04:07 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:04:07 PM</td>
+				<td class='step-details'>
+						Bắt đầu test navigation đến trang Orders Management
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:04:10 PM</td>
+				<td class='step-details'>
+						Navigation đến trang Orders Management thành công
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:04:10 PM</td>
+				<td class='step-details'>
+						PASSED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>testViewOrdersList</span>
+						<span class='test-time'>Dec 10, 2025 07:04:10 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:04:10 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:04:15 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+234ms</span>
+</div>
+<div class='test-desc'>Running test: testViewOrdersList </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:04:12 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:04:12 PM</td>
+				<td class='step-details'>
+						Bắt đầu test xem danh sách đơn hàng
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:04:15 PM</td>
+				<td class='step-details'>
+						Số lượng đơn hàng: 5
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:04:15 PM</td>
+				<td class='step-details'>
+						Xem danh sách đơn hàng thành công
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:04:15 PM</td>
+				<td class='step-details'>
+						PASSED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>testExportToExcelLinkDisplayed</span>
+						<span class='test-time'>Dec 10, 2025 07:04:15 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:04:15 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:04:24 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 9s+84ms</span>
+</div>
+<div class='test-desc'>Running test: testExportToExcelLinkDisplayed </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:04:17 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:04:17 PM</td>
+				<td class='step-details'>
+						Bắt đầu test kiểm tra link Export To Excel
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:04:24 PM</td>
+				<td class='step-details'>
+						FAILED: java.lang.AssertionError: Link Export To Excel không hiển thị expected [true] but found [false]
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>testNavigateToEditOrder</span>
+						<span class='test-time'>Dec 10, 2025 07:04:25 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:04:25 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:04:31 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+880ms</span>
+</div>
+<div class='test-desc'>Running test: testNavigateToEditOrder </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:04:27 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:04:27 PM</td>
+				<td class='step-details'>
+						Bắt đầu test navigate đến trang edit đơn hàng
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:04:31 PM</td>
+				<td class='step-details'>
+						Navigate đến trang edit đơn hàng thành công
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:04:31 PM</td>
+				<td class='step-details'>
+						PASSED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>testDeleteOrder</span>
+						<span class='test-time'>Dec 10, 2025 07:04:31 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:04:31 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:04:36 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+273ms</span>
+</div>
+<div class='test-desc'>Running test: testDeleteOrder </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:04:32 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:04:32 PM</td>
+				<td class='step-details'>
+						Bắt đầu test delete đơn hàng
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:04:36 PM</td>
+				<td class='step-details'>
+						Delete đơn hàng redirect đúng
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:04:36 PM</td>
+				<td class='step-details'>
+						PASSED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='17'>
+					<div class='test-heading'>
+						<span class='test-name'>testNavigateToCustomersPage</span>
+						<span class='test-time'>Dec 10, 2025 07:04:36 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:04:36 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:04:42 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+623ms</span>
+</div>
+<div class='test-desc'>Running test: testNavigateToCustomersPage </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:04:39 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:04:39 PM</td>
+				<td class='step-details'>
+						Bắt đầu test navigation đến trang Customers Management
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:04:42 PM</td>
+				<td class='step-details'>
+						Navigation đến trang Customers Management thành công
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:04:42 PM</td>
+				<td class='step-details'>
+						PASSED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='18'>
+					<div class='test-heading'>
+						<span class='test-name'>testViewCustomersList</span>
+						<span class='test-time'>Dec 10, 2025 07:04:42 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:04:42 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:04:47 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+643ms</span>
+</div>
+<div class='test-desc'>Running test: testViewCustomersList </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:04:43 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:04:43 PM</td>
+				<td class='step-details'>
+						Bắt đầu test xem danh sách khách hàng
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:04:47 PM</td>
+				<td class='step-details'>
+						Số lượng khách hàng: 5
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:04:47 PM</td>
+				<td class='step-details'>
+						Xem danh sách khách hàng thành công
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:04:47 PM</td>
+				<td class='step-details'>
+						PASSED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>testNavigateToCategoriesPage</span>
+						<span class='test-time'>Dec 10, 2025 07:04:47 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:04:47 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:04:52 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+401ms</span>
+</div>
+<div class='test-desc'>Running test: testNavigateToCategoriesPage </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:04:49 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:04:49 PM</td>
+				<td class='step-details'>
+						Bắt đầu test navigation đến trang Categories Management
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:04:52 PM</td>
+				<td class='step-details'>
+						Navigation đến trang Categories Management thành công
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:04:52 PM</td>
+				<td class='step-details'>
+						PASSED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='20'>
+					<div class='test-heading'>
+						<span class='test-name'>testViewCategoriesList</span>
+						<span class='test-time'>Dec 10, 2025 07:04:52 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:04:52 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:04:58 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+426ms</span>
+</div>
+<div class='test-desc'>Running test: testViewCategoriesList </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:04:55 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:04:55 PM</td>
+				<td class='step-details'>
+						Bắt đầu test xem danh sách danh mục
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:04:58 PM</td>
+				<td class='step-details'>
+						Số lượng danh mục: 5
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:04:58 PM</td>
+				<td class='step-details'>
+						Xem danh sách danh mục thành công
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:04:58 PM</td>
+				<td class='step-details'>
+						PASSED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='21'>
+					<div class='test-heading'>
+						<span class='test-name'>testAddCategoryButtonDisplayed</span>
+						<span class='test-time'>Dec 10, 2025 07:04:58 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:04:58 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:05:07 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+871ms</span>
+</div>
+<div class='test-desc'>Running test: testAddCategoryButtonDisplayed </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:04:59 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:04:59 PM</td>
+				<td class='step-details'>
+						Bắt đầu test kiểm tra nút Add Category
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:05:07 PM</td>
+				<td class='step-details'>
+						FAILED: java.lang.AssertionError: Nút Add Category không hiển thị expected [true] but found [false]
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='22'>
+					<div class='test-heading'>
+						<span class='test-name'>testAdminLoginWithNonAdminUser</span>
+						<span class='test-time'>Dec 10, 2025 07:05:07 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:05:07 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:05:12 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+553ms</span>
+</div>
+<div class='test-desc'>Running test: testAdminLoginWithNonAdminUser </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:05:09 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:05:09 PM</td>
+				<td class='step-details'>
+						Bắt đầu test đăng nhập admin bằng tài khoản User thường
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:05:12 PM</td>
+				<td class='step-details'>
+						Tài khoản User thường bị chặn/redirect khỏi trang Admin Dashboard
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:05:12 PM</td>
+				<td class='step-details'>
+						PASSED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='23'>
+					<div class='test-heading'>
+						<span class='test-name'>testAdminDirectUrlAccessWithoutLogin</span>
+						<span class='test-time'>Dec 10, 2025 07:05:12 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:05:12 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:05:14 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+43ms</span>
+</div>
+<div class='test-desc'>Running test: testAdminDirectUrlAccessWithoutLogin </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:05:14 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:05:14 PM</td>
+				<td class='step-details'>
+						Bắt đầu test truy cập Admin URL khi chưa đăng nhập
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:05:14 PM</td>
+				<td class='step-details'>
+						Hệ thống chặn truy cập Admin URL và redirect về trang Login
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:05:14 PM</td>
+				<td class='step-details'>
+						PASSED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='24'>
+					<div class='test-heading'>
+						<span class='test-name'>testNavigateToEditCategory</span>
+						<span class='test-time'>Dec 10, 2025 07:05:14 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:05:14 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:05:19 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+140ms</span>
+</div>
+<div class='test-desc'>Running test: testNavigateToEditCategory </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:05:16 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:05:16 PM</td>
+				<td class='step-details'>
+						Bắt đầu test navigate đến trang edit danh mục
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:05:19 PM</td>
+				<td class='step-details'>
+						Navigate đến trang edit danh mục thành công
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:05:19 PM</td>
+				<td class='step-details'>
+						PASSED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='25'>
+					<div class='test-heading'>
+						<span class='test-name'>testDeleteCategory</span>
+						<span class='test-time'>Dec 10, 2025 07:05:19 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:05:19 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:05:25 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+300ms</span>
+</div>
+<div class='test-desc'>Running test: testDeleteCategory </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:05:21 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:05:21 PM</td>
+				<td class='step-details'>
+						Bắt đầu test delete danh mục
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:05:25 PM</td>
+				<td class='step-details'>
+						Delete danh mục redirect đúng
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:05:25 PM</td>
+				<td class='step-details'>
+						PASSED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='26'>
+					<div class='test-heading'>
+						<span class='test-name'>testNavigateToSuppliersPage</span>
+						<span class='test-time'>Dec 10, 2025 07:05:25 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:05:25 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:05:30 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+228ms</span>
+</div>
+<div class='test-desc'>Running test: testNavigateToSuppliersPage </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:05:27 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:05:27 PM</td>
+				<td class='step-details'>
+						Bắt đầu test navigation đến trang Suppliers Management
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:05:30 PM</td>
+				<td class='step-details'>
+						Navigation đến trang Suppliers Management thành công
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:05:30 PM</td>
+				<td class='step-details'>
+						PASSED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='27'>
+					<div class='test-heading'>
+						<span class='test-name'>testViewSuppliersList</span>
+						<span class='test-time'>Dec 10, 2025 07:05:30 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:05:30 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:05:35 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+69ms</span>
+</div>
+<div class='test-desc'>Running test: testViewSuppliersList </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:05:32 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:05:32 PM</td>
+				<td class='step-details'>
+						Bắt đầu test xem danh sách nhà cung cấp
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:05:35 PM</td>
+				<td class='step-details'>
+						Số lượng nhà cung cấp: 5
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:05:35 PM</td>
+				<td class='step-details'>
+						Xem danh sách nhà cung cấp thành công
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:05:35 PM</td>
+				<td class='step-details'>
+						PASSED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='28'>
+					<div class='test-heading'>
+						<span class='test-name'>testAddSupplierButtonDisplayed</span>
+						<span class='test-time'>Dec 10, 2025 07:05:35 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:05:35 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:05:45 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 9s+442ms</span>
+</div>
+<div class='test-desc'>Running test: testAddSupplierButtonDisplayed </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:05:38 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:05:38 PM</td>
+				<td class='step-details'>
+						Bắt đầu test kiểm tra nút Add Supplier
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:05:45 PM</td>
+				<td class='step-details'>
+						FAILED: java.lang.AssertionError: Nút Add Supplier không hiển thị expected [true] but found [false]
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='29'>
+					<div class='test-heading'>
+						<span class='test-name'>testNavigateToEditSupplier</span>
+						<span class='test-time'>Dec 10, 2025 07:05:45 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:05:45 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:05:51 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+711ms</span>
+</div>
+<div class='test-desc'>Running test: testNavigateToEditSupplier </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:05:48 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:05:48 PM</td>
+				<td class='step-details'>
+						Bắt đầu test navigate đến trang edit nhà cung cấp
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:05:51 PM</td>
+				<td class='step-details'>
+						Navigate đến trang edit nhà cung cấp thành công
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:05:51 PM</td>
+				<td class='step-details'>
+						PASSED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='30'>
+					<div class='test-heading'>
+						<span class='test-name'>testDeleteSupplier</span>
+						<span class='test-time'>Dec 10, 2025 07:05:51 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:05:51 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:05:56 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+150ms</span>
+</div>
+<div class='test-desc'>Running test: testDeleteSupplier </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:05:53 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:05:53 PM</td>
+				<td class='step-details'>
+						Bắt đầu test delete nhà cung cấp
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:05:56 PM</td>
+				<td class='step-details'>
+						Delete nhà cung cấp redirect đúng
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:05:56 PM</td>
+				<td class='step-details'>
+						PASSED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='31'>
+					<div class='test-heading'>
+						<span class='test-name'>testProductListDisplayAndCount</span>
+						<span class='test-time'>Dec 10, 2025 07:05:56 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:05:56 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:06:02 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+684ms</span>
+</div>
+<div class='test-desc'>Running test: testProductListDisplayAndCount </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:05:59 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:05:59 PM</td>
+				<td class='step-details'>
+						Bắt đầu test hiển thị danh sách sản phẩm trong Admin
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:06:02 PM</td>
+				<td class='step-details'>
+						Danh sách sản phẩm hiển thị thành công với 5 sản phẩm.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:06:02 PM</td>
+				<td class='step-details'>
+						PASSED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='32'>
+					<div class='test-heading'>
+						<span class='test-name'>testCategoryListDisplayAndCount</span>
+						<span class='test-time'>Dec 10, 2025 07:06:02 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:06:02 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:06:07 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+933ms</span>
+</div>
+<div class='test-desc'>Running test: testCategoryListDisplayAndCount </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:06:04 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:06:04 PM</td>
+				<td class='step-details'>
+						Bắt đầu test hiển thị danh sách Danh mục trong Admin
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:06:07 PM</td>
+				<td class='step-details'>
+						Danh sách danh mục hiển thị thành công với 5 danh mục.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:06:07 PM</td>
+				<td class='step-details'>
+						PASSED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='33'>
+					<div class='test-heading'>
+						<span class='test-name'>testOrderListDisplayAndCount</span>
+						<span class='test-time'>Dec 10, 2025 07:06:07 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:06:07 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:06:13 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+289ms</span>
+</div>
+<div class='test-desc'>Running test: testOrderListDisplayAndCount </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:06:10 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:06:10 PM</td>
+				<td class='step-details'>
+						Bắt đầu test hiển thị danh sách Đơn hàng trong Admin
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:06:13 PM</td>
+				<td class='step-details'>
+						Danh sách đơn hàng hiển thị thành công với 5 đơn hàng.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:06:13 PM</td>
+				<td class='step-details'>
+						PASSED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='34'>
+					<div class='test-heading'>
+						<span class='test-name'>testExportOrdersToExcel</span>
+						<span class='test-time'>Dec 10, 2025 07:06:13 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:06:13 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:06:22 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 9s+245ms</span>
+</div>
+<div class='test-desc'>Running test: testExportOrdersToExcel </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:06:15 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:06:15 PM</td>
+				<td class='step-details'>
+						Bắt đầu test chức năng Xuất đơn hàng ra Excel
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:06:22 PM</td>
+				<td class='step-details'>
+						FAILED: java.lang.AssertionError: Không tìm thấy nút 'Export To Excel' expected [true] but found [false]
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='35'>
+					<div class='test-heading'>
+						<span class='test-name'>testCustomerListDisplayAndCount</span>
+						<span class='test-time'>Dec 10, 2025 07:06:22 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:06:22 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:06:28 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+816ms</span>
+</div>
+<div class='test-desc'>Running test: testCustomerListDisplayAndCount </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:06:25 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:06:25 PM</td>
+				<td class='step-details'>
+						Bắt đầu test hiển thị danh sách Khách hàng trong Admin
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:06:28 PM</td>
+				<td class='step-details'>
+						Danh sách khách hàng hiển thị thành công với 5 khách hàng.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:06:28 PM</td>
+				<td class='step-details'>
+						PASSED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='36'>
+					<div class='test-heading'>
+						<span class='test-name'>testEditProductCategoryAndSupplierSuccess</span>
+						<span class='test-time'>Dec 10, 2025 07:06:28 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:06:28 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:06:35 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 7s+5ms</span>
+</div>
+<div class='test-desc'>Running test: testEditProductCategoryAndSupplierSuccess </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:06:30 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:06:30 PM</td>
+				<td class='step-details'>
+						Bắt đầu test sửa Danh mục và Nhà cung cấp của Sản phẩm
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:06:35 PM</td>
+				<td class='step-details'>
+						FAILED: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":".//button[contains(@title, 'Edit') or contains(@class, 'edit')]"}
+  (Session info: chrome=143.0.7499.41)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [cc1647a1ac288a932c0fda14890500fb, findChildElement {id=f.F19AB338330B1C30A7997C5968EB5CCB.d.51DE70ACCD408E827CF24B0255C3A168.e.146, using=xpath, value=.//button[contains(@title, 'Edit') or contains(@class, 'edit')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.41, chrome: {chromedriverVersion: 143.0.7499.40 (c23ff452476d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57275}, goog:processID: 28276, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57275/devtoo..., se:cdpVersion: 143.0.7499.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cc1647a1ac288a932c0fda14890500fb
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='37'>
+					<div class='test-heading'>
+						<span class='test-name'>testSearchProductByName</span>
+						<span class='test-time'>Dec 10, 2025 07:06:36 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:06:36 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:06:42 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+258ms</span>
+</div>
+<div class='test-desc'>Running test: testSearchProductByName </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:06:38 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:06:38 PM</td>
+				<td class='step-details'>
+						Bắt đầu test tìm kiếm sản phẩm theo Tên
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:06:42 PM</td>
+				<td class='step-details'>
+						FAILED: java.lang.UnsupportedOperationException: To submit an element, it must be nested inside a form element
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='38'>
+					<div class='test-heading'>
+						<span class='test-name'>testSearchProductBySKU</span>
+						<span class='test-time'>Dec 10, 2025 07:06:42 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 10, 2025 07:06:42 PM</span>
+	<span class='label end-time'>Dec 10, 2025 07:06:48 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+575ms</span>
+</div>
+<div class='test-desc'>Running test: testSearchProductBySKU </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:06:45 PM</td>
+				<td class='step-details'>
+						Navigate to: http://localhost:9090
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:06:45 PM</td>
+				<td class='step-details'>
+						Bắt đầu test tìm kiếm sản phẩm theo SKU
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:06:48 PM</td>
+				<td class='step-details'>
+						FAILED: java.lang.UnsupportedOperationException: To submit an element, it must be nested inside a form element
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>38</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>0</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Dec 10, 2025 07:03:02 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Dec 10, 2025 07:06:48 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 3m 45s+894ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>OS</td>
+								<td>Windows 11</td>
+							</tr>
+							<tr>
+								<td>Java Version</td>
+								<td>17.0.17</td>
+							</tr>
+							<tr>
+								<td>User Name</td>
+								<td>Admin</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 38,
+				passParent: 31,
+				failParent: 7,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 7,
+				childCount: 0,
+				passChild: 0,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 0,
+				grandChildCount: 0,
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		<script>
+			var timeline = {
+			        "testAdminLoginSuccess":7.712,"testAdminLoginWithWrongPassword":2.634,"testAdminDashboardElements":6.432,"testAdminRoleDisplay":4.963,"testNavigationBetweenAdminPages":5.949,"testNavigateToProductsPage":5.489,"testViewProductsList":5.462,"testAddProductButtonDisplayed":5.316,"testAddProductFormDisplayed":5.871,"testNavigateToEditProduct":5.227,"testDeleteProduct":5.221,"testNavigateToOrdersPage":4.624,"testViewOrdersList":5.234,"testExportToExcelLinkDisplayed":9.084,"testNavigateToEditOrder":5.88,"testDeleteOrder":5.273,"testNavigateToCustomersPage":5.623,"testViewCustomersList":4.643,"testNavigateToCategoriesPage":5.401,"testViewCategoriesList":5.426,"testAddCategoryButtonDisplayed":8.871,"testAdminLoginWithNonAdminUser":4.553,"testAdminDirectUrlAccessWithoutLogin":2.043,"testNavigateToEditCategory":5.14,"testDeleteCategory":5.3,"testNavigateToSuppliersPage":5.228,"testViewSuppliersList":5.069,"testAddSupplierButtonDisplayed":9.442,"testNavigateToEditSupplier":5.711,"testDeleteSupplier":5.15,"testProductListDisplayAndCount":5.684,"testCategoryListDisplayAndCount":4.933,"testOrderListDisplayAndCount":5.289,"testExportOrdersToExcel":9.245,"testCustomerListDisplayAndCount":5.816,"testEditProductCategoryAndSupplierSuccess":7.005,"testSearchProductByName":6.258,"testSearchProductBySKU":5.575
+			};
+		</script>
+	
+		  <script src='https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/js/extent.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+		</script>
+	</body>
+</html>
